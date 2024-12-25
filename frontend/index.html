@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8" />
+
+<head>
+  <title>My Diary</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
+    integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+  <div id="title-container">
+    <h1 id="title">My Diary</h1>
+    <button id="add-diary">新增日記本</button>
+  </div>
+
+  <div id="view-window">
+    <div id="header">
+      <p id="tag" class="tag-class"></p>
+      <p id="mood" class="mood-class"></p>
+      <button id="edit">編輯</button>
+      <p id="date"></p>
+    </div>
+    <textarea id="content" readonly="readonly"></textarea>
+    <button id="back">返回</button>
+  </div>
+
+  <div id="edit-window">
+    <div id="header">
+      <select name="tag" id="tag-list">
+        <option value="學業">學業</option>
+        <option value="人際">人際</option>
+        <option value="社團">社團</option>
+      </select>
+      <select name="mood" id="mood-list">
+        <option value="快樂">快樂</option>
+        <option value="生氣">生氣</option>
+        <option value="難過">難過</option>
+      </select>
+      <p id="date"></p>
+      <input id="custom-date" type="date" />
+    </div>
+
+    <textarea placeholder="Diary content"></textarea>
+    <br>
+    <button id="save">儲存</button>
+    <button id="cancel">取消</button>
+    <button id="edit-date-button">修改日期</button>
+  </div>
+  <div id="tag-filter">
+    <p id="description">只顯示這些標籤：</p>
+    <label for="學業">學業</label>
+    <input id="學業" type="checkbox" checked="checked">
+    <label for="人際">人際</label>
+    <input id="人際" type="checkbox" checked="checked">
+    <label for="社團">社團</label>
+    <input id="社團" type="checkbox" checked="checked">
+  </div>
+  <div id="mood-filter">
+    <p id="description">只顯示這些心情：</p>
+    <label for="快樂">快樂</label>
+    <input id="快樂" type="checkbox" checked="checked">
+    <label for="生氣">生氣</label>
+    <input id="生氣" type="checkbox" checked="checked">
+    <label for="難過">難過</label>
+    <input id="難過" type="checkbox" checked="checked">
+  </div>
+
+  <section id="diaries"></section>
+</body>
+<template id="diary-item-template">
+  <div id="" class="diary-item">
+    <div id="header">
+      <p id="date"></p>
+      <p id="tag" class="tag-class"></p>
+      <p id="mood" class="mood-class"></p>
+    </div>
+    <textarea id="content" readonly="readonly" rows=3></textarea>
+  </div>
+</template>
+
+</html>

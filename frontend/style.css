@@ -1,0 +1,168 @@
+:root {
+  --todo-intput-height: 3rem;
+  --todo-intput-font-size: 2rem;
+}
+
+body {
+  background-color: #f4f3e1;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5vh;
+}
+
+#title-container {
+  position: relative;
+  width: 100%;
+  height: 60px;
+}
+#title {
+  position: absolute;
+  width: 100%;
+  margin: auto 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+button#add-diary {
+  position: absolute;
+  margin: 0 0 0 0;
+  top: 5px;
+  bottom: 5px;
+  right: 5px;
+  padding: 10px;
+}
+#edit-window {
+  position: fixed;
+  width: 600px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  z-index: 1000;
+  display: "none";
+}
+#view-window {
+  position: fixed;
+  width: 600px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  z-index: 1000;
+  display: "none";
+}
+
+.tag-class {
+  display: inline;
+  background-color: #4287f5;
+  text-align: center; 
+  padding: 5px 10px;
+}
+.mood-class {
+  display: inline;
+  background-color: #6bdb71;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+#view-window #header {
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+}
+#view-window #date {
+  float: right;
+  right: 0%;
+  margin: 0;
+  text-align: right;
+}
+#view-window textarea {
+  box-sizing:border-box;
+  width: 100%;
+  height: 150px;
+  margin: 5px 0;
+  resize: none;
+  white-space: pre-line;
+}
+
+#edit-window #header {
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+}
+#edit-window #tag-list {
+  display: inline;
+  background-color: #4287f5;
+  text-align: center; 
+  padding: 5px 10px;
+}
+#edit-window #mood-list {
+  display: inline;
+  background-color: #6bdb71;
+  text-align: center;
+  padding: 5px 10px;
+}
+#edit-window #date {
+  float: right;
+  margin: 0;
+  text-align: right;
+}
+#edit-window #custom-date {
+  float: right;
+}
+#edit-window textarea {
+  box-sizing:border-box;
+  width: 100%;
+  height: 150px;
+  resize: none;
+  white-space: pre-line;
+}
+
+#tag-filter #description {
+  display: inline;
+}
+
+#mood-filter #description {
+  display: inline;
+}
+
+#diaries {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: center;
+}
+
+.diary-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  margin: 10px 0;
+  border-radius: 1rem;
+  width: 100%;
+}
+.diary-item #header {
+  margin: 10px 0;
+}
+.diary-item #header #date {
+  display: inline;
+}
+.diary-item #header #tag {
+  display: inline;
+}
+.diary-item #header #mood {
+  display: inline;
+}
+.diary-item #content {
+  width: 100%;
+  resize: none;
+  white-space: pre-line;
+}
