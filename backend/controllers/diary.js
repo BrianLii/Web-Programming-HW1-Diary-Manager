@@ -4,7 +4,7 @@ export const getDiaries = async (req, res) => {
   try {
     const diaryEntries = await DiaryModel.find({});
     res.json(diaryEntries);
-  } catch (err) {
+  } catch {
     res.status(500).json({ error: 'Server error' });
   }
 }
