@@ -1,44 +1,35 @@
-# 112-1-HW1
+# How to Run the Project (112-1-HW1)
 
-## Run the project
+## Prerequisites
+- Node.js (npm)
+- Yarn
 
-Same as https://github.com/ntuee-web-programming/112-1-unit1-todo-list/tree/main
+## MongoDB Setup
 
-### 1. Environment variables setting
-- In `/backend` directory, create a file named `.env`
-- Add some lines in `.env`
-  ```bash
-  PORT=8000
-  MONGO_URL=<your connection string>
-  ```
+1. Follow this tutorial: [MongoDB Setup Guide](https://youtu.be/O5cmLDVTgAs?si=CNNLtl9m7kX7GbFh) (watch between 2:01:08 and 2:03:00).
+2. Copy the provided MongoDB connection string.
 
-### 2. Install dependencies
+## Backend Setup
 
-```bash
-cd backend
-yarn
-```
+1. In the `backend/` directory, create a `.env` file with the following content:
+    ```
+    PORT=8000
+    MONGO_URL=mongodb+srv://... (your connection string)
+    ```
+2. Install the required dependencies:
+    ```bash
+    cd backend
+    yarn
+    ```
+3. Start the server:
+    ```bash
+    yarn start
+    ```
 
-### 3. Run the server
+## Frontend Setup
 
-```bash
-yarn start
-```
-
-### 4. Open the frontend
-
-Open `frontend/index.html` by clicking it in your file explorer.
-
-Or if you're on ubuntu, you can run the following command to open it in your browser.
-
-```bash
-cd frontend
-xdg-open index.html
-```
-
-If you're on macOS, you can run the following command to open it in your browser.
-
-```bash
-cd frontend
-open index.html
-```
+1. Open `frontend/index.html` in your browser.
+2. (Optional) If running on a remote server, navigate to the `frontend/` directory and run the following command. Also, update the `baseURL` in `frontend/index.js` to your domain:
+    ```bash
+    python3 -m http.server [PORT]
+    ```
