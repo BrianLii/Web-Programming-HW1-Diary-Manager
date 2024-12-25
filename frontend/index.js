@@ -30,7 +30,7 @@ async function main() {
   setupEventListeners();
   try {
     renderAllDiary();
-  } catch (error) {
+  } catch {
     alert("Failed to load diaries!");
   }
 }
