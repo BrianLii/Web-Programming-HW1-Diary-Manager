@@ -20,10 +20,7 @@ app.use("/api/diary", diaryRouter);
 const port = process.env.PORT || 8000;
 
 mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_URL)
   .then(() => {
     // We move app.listen() here to make sure that the server is started after the connection to the database is established.
     app.listen(port, () =>
