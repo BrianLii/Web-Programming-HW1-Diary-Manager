@@ -33,3 +33,9 @@
     ```bash
     python3 -m http.server [PORT]
     ```
+
+## Reference
+This project is the HW1 for the EE3035: Web Programming course, Fall 2023.
+Some of the code has been adapted from the demo available at:
+[https://github.com/ntuee-web-programming/112-1-unit1-todo-list/tree/main](https://github.com/ntuee-web-programming/112-1-unit1-todo-list/tree/main),
+which is licensed under the MIT License.
